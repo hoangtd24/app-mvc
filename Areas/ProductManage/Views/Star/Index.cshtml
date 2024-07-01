@@ -1,0 +1,20 @@
+@inject aspnetcoremvc.Services.StarService StarService
+
+@{
+    ViewData["Title"] = "cc Page";
+}
+
+<h2>Danh sách các sao</h2>
+<ul class="list-group w-50">
+    @foreach( var star in StarService.stars){
+    <li class="list-group-item">
+        <a asp-action="Detail" asp-route-id = "@star.Id">@star.VnName</a>
+    </li>
+    }
+</ul>
+
+<div class="text-left">
+    <b>Name:</b> @TempData["Name"]
+    <br />
+    <b>Age:</b> @TempData["Age"]
+</div>

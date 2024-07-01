@@ -1,0 +1,14 @@
+@model aspnetcoremvc.Models.StarModel;
+
+
+@{
+    ViewData["Title"] = "cc Page";
+}
+<div class="card" style="width: 24rem;">
+  <img class="card-img-top" src="~/img/@(Model.Name).jpg" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">@Model.Name</h5>
+    <p class="card-text">@Model.Content</p>
+    <a asp-action="Index" asp-controller="Star" class="btn btn-primary">Go stars</a>
+  </div>
+</div>
