@@ -14,26 +14,3 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
-
-<textarea id="summernote"></textarea>
-
-
-@section Scripts {
-    <script>
-        $(document).ready(function () {
-            $('#summernote').summernote({
-                tabsize: 2,
-                height: 200,
-                toolbar: [
-                ['style', ['style']],
-                ['font', ['bold', 'underline', 'clear']],
-                ['color', ['color']],
-                ['para', ['ul', 'ol', 'paragraph']],
-                ['table', ['table']],
-                ['insert', ['link', 'picture', 'video']],
-                ['view', ['fullscreen', 'codeview', 'help']]
-                ]
-            });
-        });
-    </script>
-}

@@ -4,10 +4,9 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Details</h1>
+<h1>Chi tiết bài viết</h1>
 
 <div>
-    <h4>Post</h4>
     <hr />
     <dl class="row">
         <dt class = "col-sm-2">
@@ -32,7 +31,7 @@
             @Html.DisplayNameFor(model => model.Content)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Content)
+            @Html.Raw(@Model.Content)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.Published)
@@ -44,7 +43,7 @@
             @Html.DisplayNameFor(model => model.Author)
         </dt>
         <dd class = "col-sm-10">
-            @Html.DisplayFor(model => model.Author.Id)
+            @Html.DisplayFor(model => model.Author.UserName)
         </dd>
         <dt class = "col-sm-2">
             @Html.DisplayNameFor(model => model.DateCreated)
@@ -61,6 +60,6 @@
     </dl>
 </div>
 <div>
-    <a asp-action="Edit" asp-route-id="@Model?.PostId">Edit</a> |
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="Edit" asp-route-id="@Model.PostId">Sửa bài viết</a> |
+    <a asp-action="Index">Danh sách bài viết</a>
 </div>

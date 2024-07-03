@@ -1,0 +1,11 @@
+@model aspnetcoremvc.Models.SummerNote
+
+<script>
+    $(document).ready(function () {
+        $('@Model.ID').summernote({
+            tabsize: 2,
+            height: @Model.Height,
+            toolbar: @Html.Raw(@Model.ToolBar)
+        });
+    });
+</script>

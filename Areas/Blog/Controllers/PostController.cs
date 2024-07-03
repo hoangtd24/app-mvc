@@ -31,7 +31,7 @@ namespace aspnetcoremvc.Areas.Blog.Controllers
         // GET: Post
         public async Task<IActionResult> Index(int? pageNumber)
         {
-            var posts = _context.Posts.Include(p => p.Author);
+            var posts = _context.Posts.Include(p => p.Author).OrderByDescending(p => p.DateUpdated);
             return View(await PaginatedList<Post>.CreateAsync(posts, pageNumber ?? 1, 10));
         }
 

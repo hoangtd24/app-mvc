@@ -5,10 +5,9 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
 <p>
-    <a asp-action="Create">Create New</a>
+    <a asp-action="Create" class="btn btn-primary">Tạo bài viết</a>
 </p>
 <table class="table">
     <thead>
@@ -60,7 +59,7 @@
     </tbody>
 </table>
 
-<nav aria-label="Page navigation example">
+<nav aria-label="Page navigation example" class="d-flex justify-content-center mt-4">
     <ul class="pagination">
         <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
             <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)">Previous</a>

@@ -7,7 +7,7 @@
 <h4>Danh sach bai viet</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-8">
         <form asp-action="Create">
             <div asp-validation-summary="All" class="text-danger"></div>
             <div class="form-group">
@@ -32,7 +32,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="Content" class="control-label"></label>
-                <input asp-for="Content" class="form-control" />
+                <textarea asp-for="Content" class="form-control" id="SummerNoteContent"></textarea>
                 <span asp-validation-for="Content" class="text-danger"></span>
             </div>
             <div class="form-group form-check">
@@ -51,3 +51,12 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
+
+@{
+    var summerNote = new SummerNote(){
+        ID = "#SummerNoteContent",
+        Height = 200,
+    };
+}
+
+<partial name="_SummerNotePartial" model="summerNote"/>
