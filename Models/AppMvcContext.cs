@@ -39,9 +39,14 @@ public class AppMvcContext : IdentityDbContext<AppUser, IdentityRole, string>
             entity.HasIndex(p => p.Slug).IsUnique();
         });
 
-        modelBuilder.Entity<PostCategory>(entity => {
-            entity.HasKey(p => new {p.PostID, p.CategoryID});
+        modelBuilder.Entity<PostCategory>(entity =>
+        {
+            entity.HasKey(p => new { p.PostID, p.CategoryID });
         });
+        // modelBuilder.Entity<AppUser>()
+        // .HasMany<Post>()
+        // .WithOne();
+
     }
 
     public DbSet<Category> Categories { get; set; } = default!;

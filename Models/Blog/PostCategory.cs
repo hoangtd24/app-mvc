@@ -10,9 +10,9 @@ namespace aspnetcoremvc.Models.Blog
         public int CategoryID { set; get; }
 
         [ForeignKey("PostID")]
-        public required Post Post { set; get; }
+        public Post Post { set; get; } = null!;
 
         [ForeignKey("CategoryID")]
-        public required Category Category { set; get; }
+        public Category Category { set; get; } = null!;
     }
 }

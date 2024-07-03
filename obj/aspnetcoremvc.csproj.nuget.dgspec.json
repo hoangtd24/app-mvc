@@ -49,6 +49,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "Bogus": {
+              "target": "Package",
+              "version": "[35.5.1, )"
+            },
             "Mailkit": {
               "target": "Package",
               "version": "[4.6.0, )"

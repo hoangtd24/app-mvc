@@ -283,3 +283,6 @@ D:\C#\aspnetcoremvc\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
 D:\C#\aspnetcoremvc\obj\Debug\net8.0\aspnetcoremvc.MvcApplicationPartsAssemblyInfo.cs
 D:\C#\aspnetcoremvc\bin\Debug\net8.0\MailKit.dll
 D:\C#\aspnetcoremvc\bin\Debug\net8.0\MimeKit.dll
+D:\C#\aspnetcoremvc\obj\Debug\net8.0\aspnetcoremvc.sourcelink.json
+D:\C#\aspnetcoremvc\bin\Debug\net8.0\Bogus.dll
+D:\C#\aspnetcoremvc\bin\Debug\net8.0\package.json

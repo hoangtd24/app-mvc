@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "ykneXDMoXHn6xpe5T6w800LV2tWhliTu4qHlwGgdjam65cxGsTvPpwZpOt3wLejlv/gttwN34/QLRgBEMaXKKw==",
+  "dgSpecHash": "h/xIO/cNa0D0wJmalZTIaLn6gM5e+UrMiLqxQ6cTDO92pwYlcPwvl2ig7fMuF3QSTjLqX/skeFPO3Z8FrYTO9g==",
   "success": true,
   "projectFilePath": "D:\\C#\\aspnetcoremvc\\aspnetcoremvc.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
+    "C:\\Users\\HP\\.nuget\\packages\\bogus\\35.5.1\\bogus.35.5.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\bouncycastle.cryptography\\2.3.1\\bouncycastle.cryptography.2.3.1.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\google.protobuf\\3.25.1\\google.protobuf.3.25.1.nupkg.sha512",

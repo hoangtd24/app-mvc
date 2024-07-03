@@ -12,7 +12,7 @@ using aspnetcoremvc.Models;
 namespace aspnetcoremvc.Migrations
 {
     [DbContext(typeof(AppMvcContext))]
-    [Migration("20240701051203_AddPost")]
+    [Migration("20240702085649_AddPost")]
     partial class AddPost
     {
         /// <inheritdoc />

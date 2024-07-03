@@ -1,4 +1,5 @@
-@model IEnumerable<aspnetcoremvc.Models.Blog.Post>
+@using aspnetcoremvc.Models.Blog;
+@model PaginatedList<Post>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,28 +14,19 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.Title)
+                @Html.DisplayNameFor(model => model[1].Title)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Description)
+                @Html.DisplayNameFor(model => model[1].Published)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Slug)
+                @Html.DisplayNameFor(model => model[1].Author)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Content)
+                @Html.DisplayNameFor(model => model[1].DateCreated)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Published)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Author)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateCreated)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DateUpdated)
+                @Html.DisplayNameFor(model => model[1].DateUpdated)
             </th>
             <th></th>
         </tr>
@@ -43,22 +35,15 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Title)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Description)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Slug)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Content)
+                <a asp-action="Edit" asp-route-id="@item.PostId">
+                    @Html.DisplayFor(modelItem => item.Title)
+                </a>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Published)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Author.Id)
+                @Html.DisplayFor(modelItem => item.Author.UserName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DateCreated)
@@ -67,11 +52,27 @@
                 @Html.DisplayFor(modelItem => item.DateUpdated)
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.PostId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.PostId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.PostId">Delete</a>
+                <a asp-action="Details" asp-route-id="@item.PostId">Chi tiết </a> |
+                <a asp-action="Delete" asp-route-id="@item.PostId">Xóa</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination">
+        <li class="page-item @(Model.HasPreviousPage ? "" : "disabled")">
+            <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PageIndex - 1)">Previous</a>
+        </li>
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            <li class="page-item @(i == Model.PageIndex ? "active" : "")">
+                <a class="page-link" asp-action="Index" asp-route-pageNumber="@i">@i</a>
+            </li>
+        }
+        <li class="page-item @(Model.HasNextPage ? "" : "disabled")">
+            <a class="page-link" asp-action="Index" asp-route-pageNumber="@(Model.PageIndex + 1)">Next</a>
+        </li>
+    </ul>
+</nav>

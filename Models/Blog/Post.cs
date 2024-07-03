@@ -32,12 +32,11 @@ namespace aspnetcoremvc.Models.Blog
 
         public List<PostCategory> PostCategories { get; set; } = new List<PostCategory>();
 
-        [Required]
         [Display(Name = "Tác giả")]
         public string AuthorId { set; get; } = string.Empty;
         [ForeignKey("AuthorId")]
         [Display(Name = "Tác giả")]
-        public required AppUser Author { set; get; }
+        public AppUser? Author { set; get; }
 
         [Display(Name = "Ngày tạo")]
         public DateTime DateCreated { set; get; }
